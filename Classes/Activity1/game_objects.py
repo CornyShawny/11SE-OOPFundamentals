@@ -8,11 +8,19 @@ class Player:
 
 class Weapon:
     # TODO: create the method to intialise Weapon object attributes (same as above)
+    # The Weapon should have self, name, category and damage (can shorten if needed)
+
     def __init__(self, name, category, dmg):
         self.name = name
-        self.category
-    # The Weapon should have self, name, category and damage (can shorten if needed)
+        self.category = category
+        self.dmg = dmg
 # TODO: Create an 'Enemy' class.
-
+class Enemy:
     # TODO: Create a method to initialise Enemy object attributes
     # Each enemy should have a name, race, damage and health
+
+    def __init__(self, name, race, dmg, health):
+       self.name = name
+       self.race = race
+       self.dmg = dmg
+       self.health = health 
