@@ -26,3 +26,11 @@ print(account1.get_owner_name())
 print(account2.get_account_number())
 print(account2.get_balance())
 print(account2.get_owner_name())
+
+withdraw_amount = int(input("How much would you like to withdraw?: "))
+account1.withdraw(withdraw_amount)
+print("Your new balance is ", account1.get_balance())
+
+deposit_amount= int(input("How much would you like to deposit?: "))
+account1.deposit(deposit_amount)
+print("Your new balance is ", account1.get_balance())

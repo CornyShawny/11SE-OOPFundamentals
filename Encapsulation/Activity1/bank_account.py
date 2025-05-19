@@ -25,9 +25,20 @@ class BankAccount:
         else:
             raise ValueError("Input must be a float.")
 
-
     def set_owner_name(self, new_owner_name):
         if isinstance(new_owner_name, str):
             self.owner_name = new_owner_name
         else:
             raise ValueError("Input must be a string.")
+        
+    def withdraw(self, withdraw_amount):
+        if isinstance(withdraw_amount, int) and self.balance >= withdraw_amount:
+            self.balance -= withdraw_amount
+        else:
+            raise ValueError("Input must be a integer or the withdraw amount is bigger than balance.")
+        
+    def deposit(self, deposit_amount):
+        if isinstance(deposit_amount, int):
+            self.balance += deposit_amount
+        else:
+            raise ValueError("Input must be a integer")
